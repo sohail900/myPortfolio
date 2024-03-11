@@ -1,0 +1,130 @@
+@use '../../scss/colors';
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    // transition-property: all;
+    // transition-timing-function: cubic-bezier(0.6, 0, 0.2, 1);
+    // transition-duration: 400ms;
+    transition: top 400ms ease-in-out;
+    backdrop-filter: blur(20px);
+
+    .logo {
+        h4 {
+            font-size: 1.4rem;
+            background: linear-gradient(90deg, #36afe7ab, #58c7cb, #ace07e);
+            white-space: nowrap;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    ul {
+        display: flex;
+        gap: 1.8rem;
+        li {
+            a {
+                font-size: 0.9rem;
+                font-weight: 500;
+                opacity: 0.9;
+                code {
+                    margin-right: 0.3rem;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        .close_icon {
+            display: none;
+        }
+    }
+    .menu {
+        font-size: 1.5rem;
+        display: none;
+
+        &:active,
+        &:focus {
+            transform: scale(1.1);
+        }
+    }
+    @media screen and (max-width: 900px) {
+        .shownav {
+            width: 100vw;
+            height: 100vh;
+            background-color: colors.$card_colors;
+            position: fixed;
+            top: 0%;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.6, 0, 0.2, 1);
+            transition-duration: 300ms;
+            li {
+                margin: 0 auto;
+                background: rgba(0, 0, 0, 0.2);
+                width: 50%;
+                padding: 0.4rem 1rem;
+                border-radius: 10px;
+                position: relative;
+                transition: background, transform 300ms ease-in-out;
+                code {
+                    font-size: 1.8rem;
+                    transition: color 500ms ease;
+                }
+                a {
+                    font-size: 2rem;
+                    transition: color 1000ms ease-in-out;
+                }
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: colors.$bg_color;
+                    transform: scale(1.1);
+                    a {
+                        color: colors.$primary_color;
+                    }
+                    code {
+                        color: colors.$header_font;
+                    }
+                }
+                @media screen and (max-width: 460px) {
+                    & {
+                        width: 90%;
+                    }
+                }
+            }
+            .close_icon {
+                position: absolute;
+                top: 5%;
+                right: 5%;
+                font-size: 1.5rem;
+                color: #ff2f2f;
+                cursor: pointer;
+                display: block;
+            }
+        }
+        .close {
+            top: -5000%;
+        }
+        .menu {
+            display: block;
+        }
+    }
+}
+.hide {
+    top: -300%;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 1rem 3rem;
+    }
+}

@@ -1,0 +1,78 @@
+@use '../../scss/font';
+@use '../../scss/colors';
+@mixin display_flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+.skills_sec {
+    margin-top: 13rem;
+    width: 100%;
+
+    .skills_hero_sec {
+        @include display_flex(space-between, flex-start);
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        .skills {
+            margin-bottom: 1rem;
+            code {
+                font-size: calc(font.$code_font - 0.18rem);
+                text-align: center;
+                &:last-child {
+                    margin-top: 1rem;
+                }
+            }
+            .skills_flex {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 0.5rem;
+                width: 480px;
+                gap: 1rem;
+                .skills_card {
+                    width: 100px;
+                    aspect-ratio: 1/1;
+                    background-color: colors.$card_colors;
+                    @include display_flex(center, center);
+                    flex-direction: column;
+                    border-radius: 5px;
+                    transition: transform 500ms, background 1000ms;
+                    cursor: pointer;
+                    &:hover {
+                        background: linear-gradient(
+                            150deg,
+                            #36afe7ab,
+                            #58c7cb,
+                            #ace07e
+                        );
+                        color: #000;
+                        transition: transform 500ms, background 100ms;
+                        .skills_icon {
+                            transition: color 500ms, background-color 1000ms;
+                            color: colors.$bg_color;
+                        }
+                        h5 {
+                            transition: color 500ms, color 1000ms;
+                            color: colors.$bg_color;
+                        }
+                    }
+                }
+                .skills_card .skills_icon {
+                    color: colors.$header_font;
+                    font-size: 1.5rem;
+                    transition: color 500ms, color 1000ms;
+                }
+                .skills_card h5 {
+                    color: colors.$header_font;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    transition: color 500ms, color 1000ms;
+                }
+                @media screen and (max-width: 1024px) {
+                    & {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

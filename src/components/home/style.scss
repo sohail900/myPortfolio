@@ -1,0 +1,64 @@
+@use '../../scss/colors';
+@use '../../scss/pd';
+@mixin mixing_display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
+}
+
+.hero_sec {
+    width: 100%;
+    height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    .header {
+        pre {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 0.4rem;
+            .html_element {
+                font-size: 0.9rem;
+                opacity: 0.6;
+                font-weight: 400;
+                font-family: 'La Belle Aurore', cursive;
+                letter-spacing: 1.3px;
+                margin: 0rem 0.2rem;
+            }
+
+            .typography {
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+        }
+        .header_large_text {
+            margin-bottom: 1rem;
+            color: colors.$font_colors;
+            .linear_gradient_text {
+                background: linear-gradient(90deg, #36afe7ab, #58c7cb, #ace07e);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+            @media screen and (max-width: 980px) {
+                & {
+                    margin-top: 0rem;
+                    line-height: 50px;
+                }
+            }
+        }
+        p {
+            width: 80%;
+            line-height: 25px;
+            font-size: 0.95rem;
+            .linear_gradient_text {
+                background: linear-gradient(90deg, #36afe7ab, #58c7cb, #ace07e);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                font-weight: 600;
+            }
+        }
+    }
+}

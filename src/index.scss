@@ -1,0 +1,62 @@
+@use './scss/colors';
+@use './scss/font';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}
+h1 {
+    color: colors.$header_font;
+    font-size: font.$header;
+    font-weight: 700;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: colors.$font_colors;
+}
+p {
+    color: colors.$font_colors;
+    font-weight: 500;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: colors.$header_font;
+}
+input,
+button {
+    font-family: inter;
+}
+code {
+    color: colors.$primary_color;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+}
+body {
+    background: colors.$bg_color;
+    color: colors.$font_colors;
+    &::-webkit-scrollbar {
+        width: 8px;
+        scroll-behavior: smooth;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #36afe746, #58c7cb80, #ace07e7c);
+        border-radius: 30rem;
+    }
+}

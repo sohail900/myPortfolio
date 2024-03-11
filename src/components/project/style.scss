@@ -1,0 +1,114 @@
+@use '../../scss/colors';
+@use '../../scss/font';
+
+@mixin display($justify, $align) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+.projects_sec {
+    width: 100%;
+    margin-top: 13rem;
+    margin-bottom: 2rem;
+
+    .flex {
+        margin-top: 3rem;
+        @include display(center, center);
+        gap: 1rem;
+        flex-wrap: wrap;
+        .all_projects {
+            width: 300px;
+            cursor: default;
+            height: auto;
+            padding: 1.5rem 1.5rem;
+            background-color: colors.$card_colors;
+            border-radius: 5px;
+            position: relative;
+            .card_content {
+                background-image: radial-gradient(
+                    rgba(255, 255, 255, 0.1) 1px,
+                    transparent 1px
+                );
+                background-position: 50% 50%;
+                background-size: 1.1rem 1.1rem;
+                border-radius: 1.25rem;
+                width: 100%;
+            }
+            .card_content .project_icons {
+                @include display(space-between, center);
+                margin-bottom: 1.2rem;
+
+                .folder_icon {
+                    font-size: 3rem;
+                    color: colors.$primary_color;
+                }
+                .link_icon {
+                    display: flex;
+                    gap: 1.5rem;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    color: colors.$header_font;
+                    transition: color 300ms, transform 1000ms ease-in-out;
+                    .github:hover,
+                    .github:focus-visible {
+                        color: colors.$primary_color;
+                        transform: scale(1.2);
+                    }
+                    .link:hover,
+                    .link:focus-visible {
+                        color: colors.$primary_color;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            .card_content .project_title {
+                font-size: 1.2rem;
+                color: colors.$header_font;
+                margin-bottom: 1.2rem;
+            }
+            .card_content .project_desp {
+                font-size: 0.9rem;
+                line-height: 25px;
+                margin-bottom: 1.5rem;
+            }
+            .card_content .technlogies {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                code {
+                    font-size: 0.8rem;
+                    &:last-child {
+                        margin-right: 0rem;
+                    }
+                }
+            }
+        }
+        .all_projects:after {
+            content: '';
+            height: 80px;
+            width: 1px;
+            position: absolute;
+            left: -1px;
+            transition: top, opacity;
+            transition-duration: 400ms;
+            transition-timing-function: ease-in-out;
+            background: linear-gradient(
+                transparent,
+                colors.$primary_color,
+                transparent
+            );
+            opacity: 0;
+            z-index: -1;
+        }
+
+        .all_projects:after {
+            top: 65%;
+            opacity: 0;
+        }
+
+        .all_projects:hover:after {
+            top: 25%;
+            opacity: 1;
+        }
+    }
+}

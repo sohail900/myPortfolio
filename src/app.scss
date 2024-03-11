@@ -1,0 +1,81 @@
+@use './scss/pd';
+@use './scss/font';
+@use './scss/colors';
+@property --color-1 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #36afe7ab;
+}
+
+@property --color-2 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #58c7cb;
+}
+@property --color-3 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #ace07e;
+}
+.components {
+    padding-inline: pd.$main_body_padding;
+}
+// reusable section
+.section-container {
+    font-size: font.$hz_header;
+    color: colors.$header_font;
+    position: relative;
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 250px;
+        height: 2px;
+        background: rgba(225, 225, 225, 0.2);
+        margin-inline-start: 2rem;
+    }
+    code {
+        font-size: font.$code_font;
+        margin-right: 1rem;
+    }
+    @media screen and (max-width: 760px) {
+        &::after {
+            content: none;
+        }
+    }
+}
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(
+        90deg,
+        var(--color-1),
+        var(--color-2),
+        var(--color-3)
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: font.$header;
+    background-size: 200%;
+    white-space: nowrap;
+    animation: loading_blink 3s linear infinite;
+}
+@keyframes loading_blink {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: -200% center;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .components {
+        padding-inline: calc(pd.$main_body_padding - 1.5rem);
+    }
+}
+@media screen and (max-width: 760px) {
+    .components {
+        padding-inline: calc(pd.$main_body_padding - 9rem);
+    }
+}

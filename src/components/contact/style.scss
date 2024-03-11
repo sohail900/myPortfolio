@@ -1,0 +1,62 @@
+@use '../../scss/colors';
+@use '../../scss/font';
+@property --color-1 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #36afe7ab;
+}
+
+@property --color-2 {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: #ace07e;
+}
+.contact_sec {
+    width: 100%;
+    margin-top: 13rem;
+    margin-bottom: 2rem;
+}
+.contact_sec {
+    .contact-section-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4rem;
+        gap: 1rem;
+        position: relative;
+        width: 100%;
+        h1 {
+            font-weight: 600;
+            font-size: font.$header;
+        }
+        p {
+            width: 60%;
+            font-weight: 400;
+            line-height: 25px;
+            text-align: center;
+            @media screen and (max-width: 900px) {
+                width: fit-content;
+            }
+        }
+        a {
+            padding: 0.8rem 1.2rem;
+            background-image: linear-gradient(
+                90deg,
+                var(--color-1),
+                var(--color-2)
+            );
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            transition: transform 100ms, --color-2 400ms, --color-1 900ms 400ms;
+            border-radius: 5px;
+            color: colors.$card_colors;
+            &:hover,
+            &:focus-visible {
+                --color-1: #ace07e;
+                --color-2: #36afe7ab;
+            }
+        }
+    }
+}
