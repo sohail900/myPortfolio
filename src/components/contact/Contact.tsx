@@ -1,8 +1,8 @@
 import React from 'react'
 import { PiHandWavingBold } from 'react-icons/pi'
 import { motion } from 'framer-motion'
-import './style.scss'
 import { reftSide } from './animation'
+import './style.scss'
 
 const Contact: React.FC = () => {
     return (
