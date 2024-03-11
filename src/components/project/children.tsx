@@ -3,7 +3,7 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi'
 import { CiFolderOn } from 'react-icons/ci'
 import { IProject } from '../../types/type'
 const Children = (props: IProject) => {
-    const { id, description, externalLink, github, title } = props.values // Destructuring props
+    const { id, description, externalLink, github, title, tech } = props.values // Destructuring props
     const project_desp: string = description
     const slice_project_desp = project_desp.slice(0, 90)
 
@@ -25,11 +25,9 @@ const Children = (props: IProject) => {
             <h2 className='project_title'>{title}</h2>
             <p className='project_desp'>{slice_project_desp}...</p>
             <div className='technlogies'>
-                <code>React</code>
-                <code>Node.js</code>
-                <code>Express</code>
-                <code>Mongodb</code>
-                <code>Material UI</code>
+                {tech.map((tech, index) => (
+                    <code key={index}>{tech}</code>
+                ))}
             </div>
         </>
     )

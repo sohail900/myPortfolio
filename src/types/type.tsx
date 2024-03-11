@@ -14,5 +14,6 @@ export interface IProject {
         externalLink: string
         title: string
         description: string
+        tech:string[]
     }
 }

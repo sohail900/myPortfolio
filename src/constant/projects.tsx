@@ -6,5 +6,6 @@ export const allProjects = [
         title: 'Summarize Articles with OpenAI GPT-4',
         description:
             'Simplify your reading with Summize, an open-source article summarizer that transforms lengthy articles into clear and concise summaries',
+        tech: ['React.js', 'Tailwind Css', 'GPT Api'],
     },
 ]
