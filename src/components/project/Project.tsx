@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { motion } from 'framer-motion'
 import { cardAnimation } from './animate'
 import Children from './children'
+import { allProjects } from '../../constant/projects'
 import './style.scss'
 
 const Project: FC = () => {
@@ -13,7 +14,7 @@ const Project: FC = () => {
                     Portfolio
                 </h2>
                 <div className='flex'>
-                    {[...Array(10)].map((_, idx) => {
+                    {allProjects.map((values, idx) => {
                         return (
                             <>
                                 <motion.div
@@ -25,7 +26,7 @@ const Project: FC = () => {
                                     key={idx}
                                 >
                                     <div className='card_content'>
-                                        <Children />
+                                        <Children values={values} />
                                     </div>
                                 </motion.div>
                             </>
