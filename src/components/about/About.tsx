@@ -32,9 +32,13 @@ const About: React.FC = () => {
                         continuously explore new technologies to stay ahead in
                         this fast-paced digital world.
                     </motion.p>
-                    <motion.button variants={aboutSecAnimation}>
+                    <motion.a
+                        href='../../assets/resume.pdf'
+                        variants={aboutSecAnimation}
+                        download
+                    >
                         Download CV
-                    </motion.button>
+                    </motion.a>
                 </motion.div>
             </section>
         </>
