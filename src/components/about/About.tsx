@@ -1,8 +1,18 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { aboutSecAnimation } from './animation'
+import resumeFile from '../../assets/resume.pdf'
 import './style.scss'
 const About: React.FC = () => {
+    function downloadHandler() {
+        const element = document.createElement('a')
+        element.setAttribute('href', resumeFile)
+        element.setAttribute('download', 'resume.pdf')
+        element.style.display = 'none'
+        document.body.appendChild(element)
+        element.click()
+        document.body.removeChild(element)
+    }
     return (
         <>
             <section className='about-section' id='about'>
@@ -32,13 +42,12 @@ const About: React.FC = () => {
                         continuously explore new technologies to stay ahead in
                         this fast-paced digital world.
                     </motion.p>
-                    <motion.a
-                        href='../../assets/resume.pdf'
+                    <motion.button
+                        onClick={downloadHandler}
                         variants={aboutSecAnimation}
-                        download
                     >
                         Download CV
-                    </motion.a>
+                    </motion.button>
                 </motion.div>
             </section>
         </>
