@@ -19,10 +19,11 @@
         .all_projects {
             width: 300px;
             cursor: default;
-            height: auto;
-            padding: 1.5rem 1.5rem;
+            height: 340px;
+            overflow: auto;
+            padding: 1.5rem;
             background-color: colors.$card_colors;
-            border-radius: 5px;
+            border-radius: 10px;
             position: relative;
             .card_content {
                 background-image: radial-gradient(
@@ -65,18 +66,25 @@
                 font-size: 1.2rem;
                 color: colors.$header_font;
                 margin-bottom: 1.2rem;
+                line-height: 1.8rem;
             }
             .card_content .project_desp {
                 font-size: 0.9rem;
                 line-height: 25px;
                 margin-bottom: 1.5rem;
+                .btn {
+                    all: unset;
+                    color: colors.$primary_color;
+                    cursor: pointer;
+                    font-size: 0.75rem;
+                }
             }
             .card_content .technlogies {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 0.5rem;
+                gap: 0.3rem;
                 code {
-                    font-size: 0.8rem;
+                    font-size: 0.75rem;
                     &:last-child {
                         margin-right: 0rem;
                     }
