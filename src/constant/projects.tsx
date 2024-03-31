@@ -15,6 +15,16 @@ export const allProjects = [
         title: 'X Twitter Clone',
         description:
             'Introducing X Twitter Clone, a dynamic and user-friendly social media platform inspired by the popular microblogging service. With X Twitter Clone, users can seamlessly engage with a familiar interface, posting tweets, following friends, and exploring trending topics.',
-        tech: ['React.js', 'Typescript', 'Scss', 'Redux', 'TanStack Query'],
+        tech: [
+            'React.js',
+            'Redux',
+            'Scss',
+            'TanStack-Query',
+            'Typescript',
+            'Node.js',
+            'Express.js',
+            'Mongodb',
+            'Cloudinary',
+        ],
     },
 ]
