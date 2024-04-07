@@ -25,6 +25,12 @@
             background-color: colors.$card_colors;
             border-radius: 10px;
             position: relative;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* for Edge and IE  */
+            &::-webkit-scrollbar {
+                width: 0px;
+                scroll-behavior: smooth;
+            }
             .card_content {
                 background-image: radial-gradient(
                     rgba(255, 255, 255, 0.1) 1px,
@@ -77,6 +83,12 @@
                     color: colors.$primary_color;
                     cursor: pointer;
                     font-size: 0.75rem;
+                    margin-left: 0.2rem;
+                    border-radius: 6px;
+                    transition: background 100ms linear;
+                    &:hover {
+                        background: rgba(colors.$primary_color, 0.1);
+                    }
                 }
             }
             .card_content .technlogies {
