@@ -5,7 +5,6 @@ import {
     SiTypescript,
     SiCss3,
     SiMysql,
-    SiGit,
     SiTailwindcss,
     SiHtml5,
     SiPython,
@@ -24,7 +23,6 @@ const frontend_data: Object[] = [
     { name: 'Javascript', icon: <SiJavascript /> },
     { name: 'Typescript', icon: <SiTypescript /> },
     { name: 'Tailwind Css', icon: <SiTailwindcss /> },
-    { name: 'Git', icon: <SiGit /> },
     {
         name: 'Next.js',
         icon: <img src={nextjs} alt='next' width={'50px'} height={'50px'} />,
