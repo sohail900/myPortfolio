@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { HiDownload } from 'react-icons/hi'
 import { aboutSecAnimation } from './animation'
 import resumeFile from '../../assets/resume.pdf'
 import './style.scss'
@@ -46,7 +47,13 @@ const About: React.FC = () => {
                         onClick={downloadHandler}
                         variants={aboutSecAnimation}
                     >
-                        Download CV
+                        DOWNLOAD CV
+                        <HiDownload
+                            style={{
+                                fontSize: '1.3rem',
+                                fontWeight: 'bold',
+                            }}
+                        />
                     </motion.button>
                 </motion.div>
             </section>

@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { AiFillCloseSquare } from 'react-icons/ai'
 import { HiMenu } from 'react-icons/hi'
 import { itemLists } from './itemsList'
+import { azura0 } from '../../assets/azura/index'
 import './style.scss'
+import Logo from './Logo'
 const Navbar: React.FC = () => {
     const [showNavbar, setShowNavbar] = useState<boolean>(true)
     const [responsiveNav, setResponsiveNav] = useState<boolean>(false)
@@ -25,9 +27,7 @@ const Navbar: React.FC = () => {
     return (
         <>
             <nav className={showNavbar ? 'navbar' : 'navbar hide'}>
-                <div className='logo'>
-                    <h4>ms.web</h4>
-                </div>
+                <Logo />
                 <ul className={responsiveNav ? 'shownav' : 'shownav close'}>
                     {itemLists.map((elem, index) => {
                         const { code, href, item } = elem
