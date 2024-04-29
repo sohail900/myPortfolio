@@ -43,6 +43,7 @@ const Image = () => {
                 src={azura[azNo]}
                 alt={`azura + ${azNo}`}
                 onClick={clickHandler}
+                loading='lazy'
             />
         </>
     )

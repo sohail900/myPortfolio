@@ -32,14 +32,19 @@ const About: React.FC = () => {
                     >
                         As a passionate MERN stack web developer based in
                         Islamabad Pakistan, I specialize in crafting dynamic and
-                        user-friendly web applications. With expertise in modern
-                        web technologies, I excel at designing intuitive user
-                        interfaces and developing robust back-end systems,
-                        bringing ideas to life with precision and creativity. My
-                        proficiency in MongoDB, Express.js, React.js, and
-                        Node.js—the MERN stack—allows me to deliver high-quality
-                        solutions that meet client requirements and industry
-                        standards. Fueled by curiosity and a love for coding, I
+                        user-friendly web applications.<br></br> With expertise
+                        in modern web technologies, I excel at designing
+                        intuitive user interfaces and developing robust back-end
+                        systems, bringing ideas to life with precision and
+                        creativity.
+                        <br></br>
+                        <span className='chg_para_clr'>
+                            My proficiency in MongoDB, Express.js, React.js, and
+                            Node.js. The MERN stack—allows me to deliver
+                            high-quality solutions that meet client requirements
+                            and industry standards
+                        </span>
+                        .<br></br> Fueled by curiosity and a love for coding, I
                         continuously explore new technologies to stay ahead in
                         this fast-paced digital world.
                         <button onClick={downloadHandler} className='btn_snd_1'>

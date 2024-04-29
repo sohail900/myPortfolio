@@ -72,6 +72,9 @@
         border-radius: 4px;
         opacity: 0;
         transform: opacity 500ms linear;
+        &:hover {
+            opacity: 1;
+        }
     }
     &:hover {
         background-color: colors.$primary_color;

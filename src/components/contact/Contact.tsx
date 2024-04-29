@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
             <section className='contact_sec' id='contact'>
                 <h2 className='section-container'>
                     <code>05.</code>
-                    Say hello
+                    Say Hello!
                 </h2>
                 <motion.div
                     className='contact-section-container'
@@ -24,10 +24,10 @@ const Contact: React.FC = () => {
                         hello? Go ahead.
                     </p>
                     <a
-                        href='mailto:your-email@example.com'
+                        href='mailto:sohailbalti000@gmail.com'
                         className='btn_snd_1'
                     >
-                        Say hello
+                        Say Hello
                         <span>
                             <PiHandWavingBold />
                         </span>
