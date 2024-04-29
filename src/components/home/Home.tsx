@@ -14,15 +14,11 @@ const Home: React.FC = () => {
                     transition={{ staggerChildren: 0.5 }}
                 >
                     <motion.pre variants={homeAni}>
-                        <code className='html_element'>&lt;code&gt;</code>
-                        <code className='typography'>Hello There, I am</code>
-                        <code className='html_element'>&lt;/code&gt;</code>
+                        <code className='typography'>Hi, my name is</code>
                     </motion.pre>
-                    <motion.h1 variants={homeAni}>Muhammad Sohail</motion.h1>
+                    <motion.h1 variants={homeAni}>Muhammad Sohail.</motion.h1>
                     <h1 className='header_large_text'>
-                        Mern Stack{' '}
-                        <span className='linear_gradient_text'>Web</span>{' '}
-                        Developer
+                        I build things for the Web.
                     </h1>
                     <motion.p variants={homeAni}>
                         As a dedicated mern-stack{' '}

@@ -12,7 +12,8 @@
             font-size: 1.3rem;
             text-decoration: none;
             display: block;
-            margin-bottom: 1rem;
+            color: colors.$para_colors;
+            margin-bottom: 1.3rem;
             cursor: pointer;
             &:hover {
                 color: colors.$primary_color;
@@ -25,8 +26,7 @@
                     content: '';
                     width: 2px;
                     height: 70px;
-                    background: colors.$font_colors;
-                    opacity: 0.7;
+                    background: colors.$para_colors;
                     margin-top: 1rem;
                 }
             }
@@ -41,7 +41,7 @@
 @media screen and (max-width: 760px) {
     .social {
         bottom: 0;
-        right: 0;
+        right: -8%;
         .socialmedia {
             .icons {
                 font-size: 1rem;

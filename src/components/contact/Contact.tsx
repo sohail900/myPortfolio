@@ -18,16 +18,16 @@ const Contact: React.FC = () => {
                     whileInView={'inView'}
                     variants={reftSide}
                 >
-                    <h1>Get In Touch</h1>
+                    <h1>Get in touch!</h1>
                     <p>
-                        Have a project in mind or just want to say hello? I'm
-                        all ears! Let's grab a virtual coffee and brainstorm how
-                        we can make your digital dreams a reality. Don't
-                        hesitate to reach out – I'm here to turn your ideas into
-                        stunning web experiences
+                        Got a question or proposal, or just want<br></br> to say
+                        hello? Go ahead.
                     </p>
-                    <a href='mailto:your-email@example.com'>
-                        Say hello{' '}
+                    <a
+                        href='mailto:your-email@example.com'
+                        className='btn_snd_1'
+                    >
+                        Say hello
                         <span>
                             <PiHandWavingBold />
                         </span>

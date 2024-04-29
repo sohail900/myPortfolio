@@ -14,37 +14,80 @@
 .about-section {
     width: 100%;
     margin-top: 3rem;
-    .about-desp {
+
+    .about-me-para {
+        display: flex;
+        gap: 1rem;
         margin-top: 2.5rem;
-        p {
-            font-size: 0.95rem;
-            line-height: 25px;
+        .set-image {
+            width: auto;
+            height: 350px;
+            overflow: hidden;
+            border: 5px solid rgba(225, 225, 225, 0.2);
+            border-radius: 5px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                background-position: center;
+                aspect-ratio: 1/1;
+                cursor: pointer;
+            }
         }
-        .🕳 {
-            margin-bottom: 1rem;
-            color: colors.$primary_color;
+        p {
+            width: 75%;
+            line-height: 28px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        @media screen and (max-width: 950px) {
+            display: flex;
+            flex-direction: column;
+            .set-image {
+                display: none;
+            }
+            p {
+                width: 100%;
+            }
         }
         button {
-            margin-top: 2rem;
-            padding: 0.5rem 1.2rem;
+            all: unset;
             display: flex;
             align-items: center;
             gap: 0.3rem;
-            font-weight: 700;
-            background-image: linear-gradient(
-                90deg,
-                var(--color-1),
-                var(--color-2)
-            );
+            font-family: 'JetBrains Mono', monospace;
+            margin-top: 2rem;
+            padding: 0.6rem 1.2rem;
+            font-weight: 500;
+            border: 1px solid colors.$primary_color;
+            color: colors.$primary_color;
+            border-radius: 4px;
             cursor: pointer;
-            outline: none;
-            border: none;
-            transition: transform 200ms, --color-2 500ms, --color-1 1000ms 500ms;
-            border-radius: 5px;
-            &:hover,
-            &:focus-visible {
-                --color-1: #ace07e;
-                --color-2: #36afe7ab;
+            background: transparent;
+            font-size: 0.85rem;
+            transition: all 200ms ease-in-out;
+            position: relative;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: -1;
+                bottom: -20%;
+                right: -10%;
+                border-radius: 4px;
+                opacity: 0;
+                transform: opacity 500ms linear;
+            }
+            &:hover {
+                background-color: colors.$primary_color;
+                border: 1px solid transparent;
+                color: colors.$bg_color;
+                font-weight: 600;
+                &::before {
+                    opacity: 1;
+                }
             }
         }
     }

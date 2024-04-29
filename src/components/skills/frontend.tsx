@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
-import { cardAnimation } from './animation'
+import { frontendAnimation } from './animation'
 import { Object } from '../../types/type'
 const Frontend: React.FC<Object> = (props) => {
     return (
         <>
             <motion.div
                 className='skills_card'
-                variants={cardAnimation}
+                variants={frontendAnimation}
                 initial={'initialValue'}
                 whileInView={'inView'}
                 viewport={{ once: false, amount: 0.8 }}

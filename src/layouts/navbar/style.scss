@@ -35,15 +35,17 @@
 
     ul {
         display: flex;
-        gap: 1.8rem;
+        gap: 2rem;
         li {
             a {
-                font-size: 0.9rem;
-                font-weight: 500;
-                opacity: 0.9;
+                font-size: 0.8rem;
                 code {
+                    font-weight: 500;
                     margin-right: 0.3rem;
-                    font-size: 0.8rem;
+                }
+                span {
+                    font-weight: 400;
+                    font-family: 'JetBrains Mono', monospace;
                 }
             }
         }

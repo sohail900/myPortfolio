@@ -22,12 +22,13 @@
         flex-direction: column;
         align-items: center;
         margin-top: 4rem;
-        gap: 1rem;
         position: relative;
         width: 100%;
         h1 {
             font-weight: 600;
-            font-size: font.$header;
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 0.4rem;
         }
         p {
             width: 60%;
@@ -39,24 +40,7 @@
             }
         }
         a {
-            padding: 0.8rem 1.2rem;
-            background-image: linear-gradient(
-                90deg,
-                var(--color-1),
-                var(--color-2)
-            );
-            font-weight: 600;
-            cursor: pointer;
-            outline: none;
-            border: none;
-            transition: transform 100ms, --color-2 400ms, --color-1 900ms 400ms;
-            border-radius: 5px;
-            color: colors.$card_colors;
-            &:hover,
-            &:focus-visible {
-                --color-1: #ace07e;
-                --color-2: #36afe7ab;
-            }
+            padding-block: 0.9rem;
         }
     }
 }

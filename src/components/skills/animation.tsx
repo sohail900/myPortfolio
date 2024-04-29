@@ -1,15 +1,30 @@
-export const cardAnimation = {
+export const frontendAnimation = {
     initialValue: {
-        y: 40,
+        x: -30,
         opacity: 0,
     },
     inView: {
-        y: 0,
+        x: 0,
         opacity: 1,
         transition: {
             type: 'spring',
             duration: 2,
-            bounce: 0.3,
+            bounce: 0.2,
+        },
+    },
+}
+export const backendAnimation = {
+    initialValue: {
+        x: 30,
+        opacity: 0,
+    },
+    inView: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            type: 'spring',
+            duration: 2,
+            bounce: 0.2,
         },
     },
 }

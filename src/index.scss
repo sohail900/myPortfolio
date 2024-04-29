@@ -49,14 +49,13 @@ body {
     background: colors.$bg_color;
     color: colors.$font_colors;
     &::-webkit-scrollbar {
-        width: 8px;
+        width: 5px;
         scroll-behavior: smooth;
     }
     &::-webkit-scrollbar-track {
         background-color: transparent;
     }
     &::-webkit-scrollbar-thumb {
-        background: linear-gradient(180deg, #36afe746, #58c7cb80, #ace07e7c);
-        border-radius: 30rem;
+        background: #495670;
     }
 }

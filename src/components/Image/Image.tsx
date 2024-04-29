@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import {
     azura0,
     azura1,
@@ -12,7 +11,8 @@ import {
     azura8,
     azura9,
 } from '../../assets/azura/index'
-const Logo = () => {
+import { motion } from 'framer-motion'
+const Image = () => {
     const [azura, setAzura] = useState([
         azura0,
         azura1,
@@ -35,18 +35,17 @@ const Logo = () => {
     }
     return (
         <>
-            <div className='logo' onClick={clickHandler}>
-                <motion.img
-                    initial={{ opacity: 1, scale: 1 }} // Change initial values to skip animation on first
-                    animate={{ opacity: 1, scale: 1 }}
-                    whileTap={{ scale: 1.3, opacity: 0.8 }} // Add tap animation
-                    transition={{ duration: 0.1, stiffness: 300 }}
-                    src={azura[azNo]}
-                    alt={`azura + ${azNo}`}
-                />
-            </div>
+            <motion.img
+                initial={{ opacity: 1, scale: 1 }} // Change initial values to skip animation on first
+                animate={{ opacity: 1, scale: 1 }}
+                whileTap={{ scale: 1.3, opacity: 0.8 }} // Add tap animation
+                transition={{ duration: 0.1, stiffness: 300 }}
+                src={azura[azNo]}
+                alt={`azura + ${azNo}`}
+                onClick={clickHandler}
+            />
         </>
     )
 }
 
-export default Logo
+export default Image

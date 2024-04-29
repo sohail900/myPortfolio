@@ -1,7 +1,7 @@
 export const aboutSecAnimation = {
     initialValue: {
-        x: -20,
-        opacity: 0.8,
+        x: -30,
+        opacity: 0.5,
     },
     inView: {
         x: 0,
@@ -10,6 +10,23 @@ export const aboutSecAnimation = {
             type: 'spring',
             duration: 2,
             bounce: 0.2,
+        },
+    },
+}
+export const aboutImageAnimation = {
+    initialValue: {
+        x: 40,
+        opacity: 0.5,
+        scale: 0.9,
+    },
+    inView: {
+        x: 0,
+        opacity: 1,
+        scale: 1,
+        transition: {
+            type: 'spring',
+            duration: 2,
+            bounce: 0.3,
         },
     },
 }
