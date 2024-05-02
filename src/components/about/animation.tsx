@@ -1,6 +1,6 @@
 export const aboutSecAnimation = {
     initialValue: {
-        x: -30,
+        x: -40,
         opacity: 0.5,
     },
     inView: {
@@ -9,7 +9,7 @@ export const aboutSecAnimation = {
         transition: {
             type: 'spring',
             duration: 2,
-            bounce: 0.2,
+            bounce: 0.3,
         },
     },
 }
