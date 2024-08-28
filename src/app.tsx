@@ -11,18 +11,20 @@ import './app.scss'
 const App: React.FC = () => {
     return (
         <>
-            <Suspense fallback={<Loading />}>
-                <main className='components'>
-                    <Home />
-                    <About />
-                    <Skills />
-                    <Project />
-                    <Contact />
-                    <Footer />
-                </main>
-                <Navbar />
-                <Social />
-            </Suspense>
+            <main className="container">
+                <Suspense fallback={<Loading />}>
+                    <section className='components'>
+                        <Home />
+                        <About />
+                        <Skills />
+                        <Project />
+                        <Contact />
+                        <Footer />
+                    </section>
+                    <Navbar />
+                    <Social />
+                </Suspense>
+            </main>
         </>
     )
 }

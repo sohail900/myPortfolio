@@ -27,4 +27,21 @@ export const allProjects = [
             'Tanstack-Query',
         ],
     },
+    {
+        id: 3,
+        github: 'https://github.com/sohail900/medicAi',
+        externalLink: 'https://medic-ai-snowy.vercel.app/',
+        title: 'MedicDoc-Ai',
+        description:
+            'Transform patient care with our advanced AI technology. Automatically generate accurate SOAP notes from patient documents, tailored to your specialty with unmatched speed and precision.',
+        tech: [
+            'React.js',
+            'Tailwind',
+            'Node.js',
+            'Firebase',
+            'Express.js',
+            'Typescript',
+            'OpenAi',
+        ],
+    },
 ]

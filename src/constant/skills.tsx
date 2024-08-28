@@ -8,6 +8,7 @@ import {
     SiTailwindcss,
     SiHtml5,
     SiPython,
+    SiFirebase,
 } from 'react-icons/si'
 import { FaNodeJs } from 'react-icons/fa'
 import { GrReactjs, GrSettingsOption } from 'react-icons/gr'
@@ -38,6 +39,7 @@ const backend_data: Object[] = [
     { name: 'Node.js', icon: <FaNodeJs /> },
     { name: 'Express', icon: <SiExpress /> },
     { name: 'Mongodb', icon: <SiMongodb /> },
+    { name: 'Firebase', icon: <SiFirebase /> },
     { name: 'Mysql', icon: <SiMysql /> },
     { name: 'Python', icon: <SiPython /> },
     { name: 'Rest Api', icon: <MdSettings /> },

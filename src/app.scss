@@ -17,6 +17,10 @@
     inherits: true;
     initial-value: #ace07e;
 }
+.container {
+    max-width: 1366px;
+    margin-inline: auto;
+}
 .components {
     padding-inline: pd.$main_body_padding;
 }

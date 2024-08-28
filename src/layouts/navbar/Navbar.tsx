@@ -25,45 +25,47 @@ const Navbar: React.FC = () => {
     }, [showNavbar])
     return (
         <>
-            <nav className={showNavbar ? 'navbar' : 'navbar hide'}>
-                <div className='logo'>
-                    <Image />
-                </div>
-                <ul className={responsiveNav ? 'shownav' : 'shownav close'}>
-                    {itemLists.map((elem, index) => {
-                        const { code, href, item } = elem
-                        return (
-                            <li key={index}>
-                                <a
-                                    href={href}
-                                    onClick={() => {
-                                        setResponsiveNav(true)
-                                    }}
-                                >
-                                    <code>0{code}.</code>
-                                    <span>{item}</span>
-                                </a>
-                            </li>
-                        )
-                    })}
-                    <span
-                        className='close_icon'
+            <section className='nav_container'>
+                <nav className={showNavbar ? 'navbar' : 'navbar hide'}>
+                    <div className='logo'>
+                        <Image />
+                    </div>
+                    <ul className={responsiveNav ? 'shownav' : 'shownav close'}>
+                        {itemLists.map((elem, index) => {
+                            const { code, href, item } = elem
+                            return (
+                                <li key={index}>
+                                    <a
+                                        href={href}
+                                        onClick={() => {
+                                            setResponsiveNav(true)
+                                        }}
+                                    >
+                                        <code>0{code}.</code>
+                                        <span>{item}</span>
+                                    </a>
+                                </li>
+                            )
+                        })}
+                        <span
+                            className='close_icon'
+                            onClick={() => {
+                                setResponsiveNav(false)
+                            }}
+                        >
+                            <AiFillCloseSquare />
+                        </span>
+                    </ul>
+                    <div
+                        className='menu'
                         onClick={() => {
-                            setResponsiveNav(false)
+                            setResponsiveNav(true)
                         }}
                     >
-                        <AiFillCloseSquare />
-                    </span>
-                </ul>
-                <div
-                    className='menu'
-                    onClick={() => {
-                        setResponsiveNav(true)
-                    }}
-                >
-                    <HiMenu />
-                </div>
-            </nav>
+                        <HiMenu />
+                    </div>
+                </nav>
+            </section>
         </>
     )
 }

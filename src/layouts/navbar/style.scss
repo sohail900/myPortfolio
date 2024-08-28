@@ -1,5 +1,11 @@
 @use '../../scss/colors';
-.navbar {
+.nav_container {
+    width: 100%;
+    max-width: 1366px;
+    margin-inline: auto;
+    position: relative;
+}
+.nav_container .navbar {
     width: 100%;
     display: flex;
     align-items: center;
@@ -13,7 +19,6 @@
     transition-duration: 400ms;
     transition: top 400ms ease-in-out;
     backdrop-filter: blur(20px);
-
     .logo {
         width: 45px;
         height: 45px;
