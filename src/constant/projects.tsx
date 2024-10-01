@@ -54,7 +54,7 @@ export const allProjects = [
         tech: [
             'React.js',
             'Tailwind',
-            'Framer,
+            'Framer',
             'Typescript',
         ],
     },
