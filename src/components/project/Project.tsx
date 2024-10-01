@@ -14,7 +14,7 @@ const Project: FC = () => {
                     Portfolio
                 </h2>
                 <div className='flex'>
-                    {allProjects.map((values, idx) => {
+                    {allProjects?.map((values, idx) => {
                         return (
                             <>
                                 <motion.div
@@ -23,7 +23,7 @@ const Project: FC = () => {
                                     whileInView={'inView'}
                                     viewport={{ once: false, amount: 0.5 }}
                                     className='all_projects'
-                                    key={idx}
+                                    key={values.id}
                                 >
                                     <div className='card_content'>
                                         <Children values={values} />
