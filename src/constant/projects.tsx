@@ -44,4 +44,18 @@ export const allProjects = [
             'OpenAi',
         ],
     },
+    {
+        id: 4,
+        github: 'https://github.com/sohail900/eng_site',
+        externalLink: 'https://eng-site.vercel.app/',
+        title: 'Civil-Eng',
+        description:
+            "A modern Civil Engineering website built with React, Framer for animations, and Tailwind CSS for responsive, sleek design, offering a seamless user experience across devices.",
+        tech: [
+            'React.js',
+            'Tailwind',
+            'Framer,
+            'Typescript',
+        ],
+    },
 ]
