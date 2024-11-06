@@ -2,7 +2,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { iconsAnimation } from './animation'
 import { FaWhatsapp } from 'react-icons/fa'
-import { FiTwitter, FiLinkedin, FiGithub, FiInstagram } from 'react-icons/fi'
+import {  FiLinkedin, FiGithub, FiInstagram } from 'react-icons/fi'
+import { RiTwitterXFill } from "react-icons/ri";
 import './style.scss'
 const Social: React.FC = () => {
     return (
@@ -24,7 +25,7 @@ const Social: React.FC = () => {
                         <FaWhatsapp />
                     </motion.a>
                     <motion.a variants={iconsAnimation} className='icons'>
-                        <FiTwitter />
+                        <RiTwitterXFill />
                     </motion.a>
                     <motion.a
                         href='https://www.linkedin.com/in/sohailwebdev011/'
